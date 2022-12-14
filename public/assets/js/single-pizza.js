@@ -124,11 +124,11 @@ function handleNewCommentSubmit(event) {
       if (!response.ok) {
         throw new Error('Something went wrong!');
       }
-      response.json();
+      return response.json();
     })
     .then(commentResponse => {
       console.log(commentResponse);
-      // location.reload();
+      location.reload();
     })
     .catch(err => {
       console.log(err);
